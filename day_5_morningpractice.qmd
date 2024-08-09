@@ -1,6 +1,6 @@
 ---
 title: "Day 5 Practice"
-author: "BJ & Nicole"
+author: "BJ and Nicole"
 format: html
 execute: 
   warning: false
