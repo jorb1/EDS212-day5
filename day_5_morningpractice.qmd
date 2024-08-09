@@ -1,6 +1,6 @@
 ---
 title: "Day 5 Practice"
-author: "BJ"
+author: "BJ & Nicole"
 format: html
 execute: 
   warning: false
@@ -8,6 +8,9 @@ editor: visual
 editor_options: 
   chunk_output_type: console
 ---
+
+Hey I miss my cat 
+  -Nicole
 
 ```{r}
 
@@ -25,6 +28,7 @@ dim(starwars)
 ```
 
 Create a ggplot (scatterplot)
+
 ```{r}
 
 #| echo: false
@@ -35,7 +39,8 @@ ggplot(data = starwars, aes(x = height, y = mass, color = mass)) +
        title = "Star Wars!")
 ```
 
-Create a histogram of character heights 
+Create a histogram of character heights
+
 ```{r}
 #| fig-cap: "This is my figure caption"
 #| fig-alt: "This is some alt text"
