@@ -1,0 +1,54 @@
+---
+title: "Day 5 Practice"
+author: "BJ"
+format: html
+execute: 
+  warning: false
+editor: visual
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r}
+
+#| message: false
+# load libraries ----
+library(tidyverse)
+```
+
+```{r}
+#| include: false
+# do some data exploration of the starwars df ----
+head(starwars, n = 10)
+tail(starwars)
+dim(starwars)
+```
+
+Create a ggplot (scatterplot)
+```{r}
+
+#| echo: false
+ggplot(data = starwars, aes(x = height, y = mass, color = mass)) +
+  geom_point() +
+  labs(x = "Height (cm)", 
+       y = "Mass (kg)",
+       title = "Star Wars!")
+```
+
+Create a histogram of character heights 
+```{r}
+#| fig-cap: "This is my figure caption"
+#| fig-alt: "This is some alt text"
+ggplot(data = starwars, aes(x=height)) +
+  geom_histogram(fill = 'purple', color = 'orange') +
+  labs(x = "Height (cm)",
+       y = "Count")
+```
+
+`df$col_name`
+
+```{r}
+sw_height_mean <- round(mean(starwars$height, na.rm = TRUE), 3)
+```
+
+The mean height of all star wars characters is `r sw_height_mean`
